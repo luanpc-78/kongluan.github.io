@@ -1,0 +1,51 @@
+<div class="puzzle-mode-select">
+    <h2 data-i18n="chooseMode">Chọn chế độ</h2>
+    <button class="mode-btn" id="mode-random" data-i18n="playRandom">Chơi ngẫu nhiên</button>
+    <button class="mode-btn" id="mode-add" data-i18n="addQuestion">Thêm câu hỏi</button>
+</div>
+<div class="puzzle-add-question" style="display:none;">
+    <h2 data-i18n="addNewQuestion">Thêm câu hỏi mới</h2>
+    <form id="add-question-form" autocomplete="off">
+        <div class="form-group">
+            <label for="new-hint" data-i18n="questionLabel">Câu hỏi <span style="color:red">*</span></label>
+            <input type="text" id="new-hint" required placeholder="Nhập nội dung câu hỏi" maxlength="50" />
+        </div>
+        <div class="form-group">
+            <label for="new-word" data-i18n="answerLabel">Đáp án <span style="color:red">*</span></label>
+            <input type="text" id="new-word" required placeholder="Nhập đáp án (chỉ chữ cái, không dấu cách)" maxlength="20" pattern="[a-zA-Z]+" />
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-i18n="startPlay">Bắt đầu chơi</button>
+            <button type="button" id="cancel-add" class="btn btn-secondary" data-i18n="cancel">Hủy</button>
+        </div>
+    </form>
+</div>
+<div class="puzzle-last-question" style="display:none; text-align:center; margin: 16px 0;">
+    <h3 data-i18n="lastQuestion">Câu hỏi vừa chơi:</h3>
+    <div><b data-i18n="answer">Đáp án:</b> <span id="last-answer"></span></div>
+    <div><b data-i18n="hint">Gợi ý:</b> <span id="last-hint"></span></div>
+</div>
+<div class="puzzle-container">
+    <div class="game-modal">
+        <div class="content">
+            <img src="#" alt="gif">
+            <h4 data-i18n="gameOver">Game Over!</h4>
+            <p data-i18n="correctWord">The correct word was: <b>rainbow</b></p>
+            <div class="play-again-box">
+                <button class="play-again"><span class="play-again-text" data-i18n="playAgain">Play Again</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hangman-box">
+            <img src="#" draggable="false" alt="hangman-img">
+            <h1 data-i18n="puzzleTitle">Hangman Game</h1>
+        </div>
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <h4 class="hint-text">Hint: <b></b></h4>
+            <h4 class="guesses-text">Incorrect guesses: <b></b></h4>
+            <div class="keyboard"></div>
+        </div>
+    </div>
+</div>
